@@ -2,15 +2,18 @@ const express = require('express');
 const user = express.Router();
 
 const {
-  create,   
-  findAll,
-  findbyID,
+  get,
+  create,
+  edit,
+  deleteUser,
 } = require('../../controller/user/user.controller');
+
+user.get('/get', get); // http://localhost:5000/user/get
 
 user.post('/create', create); // http://localhost:5000/user/create
 
-user.get('/findall', findAll); // http://localhost:5000/contact/findall
+user.put('/edit/:id', edit); // http://localhost:5000/user/edit/${id}
 
-user.get('/findone/:_id', findbyID); // http://localhost:5000/contact/findbyID/:_id
+user.delete('/deleteUser/:id', deleteUser); // http://localhost:5000/user/deleteUser/${id}
 
 module.exports = user;

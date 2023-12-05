@@ -15,22 +15,4 @@ app.use(cookieParser());
 const userRouter = require('./routes/user/user.routes');
 app.use('/user', userRouter);
 
-// const selfPurchaseReward = require("./routes/selfPurchaseReward/selfPurchaseReward.routes")
-// app.use("/selfPurchaseReward" , selfPurchaseReward);
-
-// const productRouter = require("./routes/product/product.router")
-// app.use("/product" , productRouter);
-
-// const wishlist = require("./routes/wishlist/wishlist.router")
-// app.use("/wishlist" , wishlist);
-
-// const bagrouter = require("./routes/addToBag/addToBag.route")
-// app.use("/bag" , bagrouter);
-
-// const contactUs = require("./routes/contactUs/contactUs.routes")
-// app.use("/contact", contactUs)
-
-// const productOrder = require("./routes/productOrder/productOrder.routes")
-// app.use("/productorder", productOrder)
-
 module.exports = { app };

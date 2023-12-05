@@ -1,27 +1,40 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-  userId: {
-    type: String,
-    required: false,
-    default: null,
-  },
   name: {
     type: String,
     required: false,
     default: null,
   },
-
-  email: {
+  dob: {
     type: String,
     required: false,
-    default: null,
+    default: '',
   },
-
-  password: {
+  salary: {
     type: String,
     required: false,
-    default: null,
+    default: '',
+  },
+  joining: {
+    type: String,
+    required: false,
+    default: '',
+  },
+  relieving: {
+    type: String,
+    required: false,
+    default: '',
+  },
+  contact: {
+    type: String,
+    required: false,
+    default: '',
+  },
+  status: {
+    type: String,
+    required: false,
+    default: 'inactive',
   },
 });
 
